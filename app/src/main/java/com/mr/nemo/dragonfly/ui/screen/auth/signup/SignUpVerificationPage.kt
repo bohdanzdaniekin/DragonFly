@@ -103,7 +103,7 @@ fun SignUpVerificationPage(
 
 @Preview(showBackground = true)
 @Composable
-fun SignUpVerificationPagePreview() {
+private fun SignUpVerificationPagePreview() {
     DragonFlyTheme {
         SignUpVerificationPage(
             state = SignUpVerificationPageState(

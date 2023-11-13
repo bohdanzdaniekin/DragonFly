@@ -123,7 +123,7 @@ private fun OnboardingScreen(
 @OptIn(ExperimentalFoundationApi::class)
 @Preview(showBackground = true)
 @Composable
-fun OnboardingScreenPreview() {
+private fun OnboardingScreenPreview() {
     DragonFlyTheme {
         OnboardingScreen(
             state = OnboardingScreenState(

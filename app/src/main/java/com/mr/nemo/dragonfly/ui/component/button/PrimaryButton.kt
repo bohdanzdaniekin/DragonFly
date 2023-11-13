@@ -49,7 +49,7 @@ fun PrimaryButton(
 
 @Preview(showBackground = true)
 @Composable
-fun PrimaryButtonPreview() {
+private fun PrimaryButtonPreview() {
     DragonFlyTheme {
         PrimaryButton(
             text = "Next",
@@ -63,7 +63,7 @@ fun PrimaryButtonPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun PrimaryButtonPreviewDisable() {
+private fun PrimaryButtonPreviewDisable() {
     DragonFlyTheme {
         PrimaryButton(
             text = "Next",

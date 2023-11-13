@@ -7,8 +7,11 @@
     <string name="button_forgot_password">Forgot password?</string>
     <string name="button_login">Login</string>
     <string name="button_login_with_gmail">Login with Gmail</string>
+    <string name="button_register">Register</string>
     <string name="button_register_with_gmail">Register with Gmail</string>
     <string name="button_register_with_email">Register with email</string>
+    <string name="button_create">Create</string>
+    <string name="button_view_more">View more</string>
 
     <string name="swipe_for_more">Swipe for more</string>
     <string name="welcome">Welcome</string>
@@ -25,12 +28,29 @@
     <string name="sign_up_page_title_verify">Verify</string>
     <string name="title_verification">"Enter the verification code that we sent to "</string>
     <string name="your_balance">Your Balance</string>
+    <string name="send">Send</string>
+    <string name="request">Request</string>
+    <string name="history">History</string>
+    <string name="my_pocket">My Pocket</string>
+    <string name="home">Home</string>
+    <string name="pocket">Pocket</string>
+    <string name="inbox">Inbox</string>
+    <string name="profile">Profile</string>
+    <string name="currency">Currency</string>
 
     <string name="content_description_swipe_down_for_more">Swipe down for more</string>
     <string name="content_description_navigate_back">Navigate backward</string>
+    <string name="content_description_navigate_forward">Navigate forward</string>
     <string name="content_description_sign_up_faq">Navigate to Sign Up FAQ</string>
     <string name="content_description_verification">Verification</string>
-    <string name="content_description_scan">Verification</string>
+    <string name="content_description_scan">Scan QR-code</string>
+    <string name="content_description_resend_code">Resend verification sms code</string>
+    <string name="content_description_hide">Hide</string>
+    <string name="content_description_show">Show</string>
+    <string name="content_description_my_pocket">My pocket</string>
+    <string name="content_description_go_to">Go to %s</string>
+    <string name="content_description_close_ad">Close Ad</string>
+    <string name="content_description_currency">Currency</string>
 
     <string name="hint_email_username">Email / Username</string>
     <string name="hint_email">Email</string>
@@ -38,10 +58,7 @@
     <string name="hint_password">Password</string>
     <string name="hint_password_confirmation">Re - Password</string>
     <string name="hint_phone">Phone</string>
-    <string name="content_description_resend_code">Resend verification sms code</string>
 
     <string name="template_times_minutes">Resend %01d:%02d</string>
-    <string name="content_description_hide_balance">Hide balance</string>
-    <string name="content_description_show_balance">Show balance</string>
 
 </resources>

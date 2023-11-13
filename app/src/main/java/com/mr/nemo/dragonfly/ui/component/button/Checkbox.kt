@@ -83,7 +83,7 @@ fun rememberCheckboxBorderColor(
 
 @Preview(showBackground = true)
 @Composable
-fun ComposibilityCheckboxPreviewChecked() {
+private fun ComposibilityCheckboxPreviewChecked() {
     DragonFlyTheme {
         Checkbox(
             isChecked = true,
@@ -94,7 +94,7 @@ fun ComposibilityCheckboxPreviewChecked() {
 
 @Preview(showBackground = true)
 @Composable
-fun ComposibilityCheckboxPreviewNotChecked() {
+private fun ComposibilityCheckboxPreviewNotChecked() {
     DragonFlyTheme {
         Checkbox(
             isChecked = false,

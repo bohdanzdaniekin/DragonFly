@@ -148,7 +148,7 @@ fun SignUpInfoItem(
 
 @Preview(showBackground = true)
 @Composable
-fun SignUpInfoScreenPreview() {
+private fun SignUpInfoScreenPreview() {
     DragonFlyTheme {
         SignUpInfoScreen(
             state = SignUpInfoScreenState(

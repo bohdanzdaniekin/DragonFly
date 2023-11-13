@@ -47,7 +47,7 @@ fun TitleText(
 
 @Preview(showBackground = true)
 @Composable
-fun TitleTextPreview() {
+private fun TitleTextPreview() {
     DragonFlyTheme {
         TitleText(text = "Preview")
     }

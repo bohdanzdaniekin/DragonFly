@@ -238,7 +238,7 @@ private fun SignInScreen(
                         },
                     ) {
                         Text(
-                            text = stringResource(R.string.register),
+                            text = stringResource(R.string.button_register),
                             style = typography.text1.regular,
                             color = colors.primary.main
                         )
@@ -253,7 +253,7 @@ private fun SignInScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun SignInScreenPreview() {
+private fun SignInScreenPreview() {
     DragonFlyTheme {
         SignInScreen(
             state = SignInScreenState(),

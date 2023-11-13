@@ -99,7 +99,7 @@ fun SignUpTypeScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun SignUpTypeScreenPreview() {
+private fun SignUpTypeScreenPreview() {
     DragonFlyTheme {
         SignUpTypeScreen()
     }

@@ -14,6 +14,7 @@ data class Typography(
     val subtitle1: WeightableTextStyle = WeightableTextStyle.Default,
     val subtitle2: WeightableTextStyle = WeightableTextStyle.Default,
     val button: TextStyle = TextStyle.Default,
+    val card: TextStyle = TextStyle.Default,
     val text1: WeightableTextStyle = WeightableTextStyle.Default,
     val text2: WeightableTextStyle = WeightableTextStyle.Default,
     val caption: WeightableTextStyle = WeightableTextStyle.Default
@@ -108,6 +109,12 @@ val typography = Typography(
         fontSize = 14.sp,
         lineHeight = 21.sp,
         fontFamily = FontFamily(Font(R.font.font_montserrat_semibold)),
+        fontWeight = FontWeight(500)
+    ),
+    card = TextStyle(
+        fontSize = 10.sp,
+        lineHeight = 15.sp,
+        fontFamily = FontFamily(Font(R.font.font_ocr_a_regular)),
         fontWeight = FontWeight(500)
     ),
     text1 = WeightableTextStyle(

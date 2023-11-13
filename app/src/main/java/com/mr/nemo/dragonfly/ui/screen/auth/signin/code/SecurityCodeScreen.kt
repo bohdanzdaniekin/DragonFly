@@ -64,7 +64,7 @@ fun SecurityCodeScreen(
 
 @Preview
 @Composable
-fun SecurityCodeScreenPreview() {
+private fun SecurityCodeScreenPreview() {
     DragonFlyTheme {
         SecurityCodeScreen(
             state = SecurityCodeState("1"),

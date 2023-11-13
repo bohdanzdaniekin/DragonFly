@@ -72,7 +72,7 @@ fun PasswordTextField(
 
 @Preview(showBackground = true)
 @Composable
-fun PasswordTextFieldPreview() {
+private fun PasswordTextFieldPreview() {
     DragonFlyTheme {
         PasswordTextField(
             password = "some_password",

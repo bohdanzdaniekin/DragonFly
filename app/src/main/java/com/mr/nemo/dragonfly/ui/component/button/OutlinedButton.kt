@@ -49,7 +49,7 @@ fun OutlinedButton(
 
 @Preview(showBackground = true)
 @Composable
-fun OutlinedButtonPreview() {
+private fun OutlinedButtonPreview() {
     DragonFlyTheme {
         OutlinedButton(
             text = "Login",
@@ -63,7 +63,7 @@ fun OutlinedButtonPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun OutlinedButtonPreviewLeadingIcon() {
+private fun OutlinedButtonPreviewLeadingIcon() {
     DragonFlyTheme {
         OutlinedButton(
             text = "Login",
@@ -83,7 +83,7 @@ fun OutlinedButtonPreviewLeadingIcon() {
 
 @Preview(showBackground = true)
 @Composable
-fun OutlinedButtonPreviewTrailingIcon() {
+private fun OutlinedButtonPreviewTrailingIcon() {
     DragonFlyTheme {
         OutlinedButton(
             text = "Login",

@@ -98,7 +98,7 @@ fun SecurityCode(
 
 @Preview(showBackground = true)
 @Composable
-fun SmsCodePreview() {
+private fun SmsCodePreview() {
     DragonFlyTheme {
         SecurityCode(
             state = SecurityCodeState("2"),

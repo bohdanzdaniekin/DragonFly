@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
@@ -47,7 +46,7 @@ fun SignUpScreen(
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SignUpScreen(
     state: SignUpScreenState,
@@ -82,20 +81,8 @@ fun SignUpScreen(
                                 tint = Color.Unspecified
                             )
                         }
-                    },
-                    modifier = Modifier.padding(horizontal = spacing.medium)
+                    }
                 )
-                AnimatedVisibility(visible = page.isProgressVisible) {
-                    LinearProgressIndicator(
-                        progress = state.progress,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .requiredHeight(8.dp),
-                        color = colors.primary.main,
-                        trackColor = colors.neutral7,
-                        strokeCap = StrokeCap.Square
-                    )
-                }
             }
         },
         containerColor = colors.neutral8
@@ -103,60 +90,76 @@ fun SignUpScreen(
         Column(
             modifier = Modifier
                 .padding(paddingValues)
-                .padding(horizontal = spacing.medium)
         ) {
+            AnimatedVisibility(visible = page.isProgressVisible) {
+                LinearProgressIndicator(
+                    progress = state.progress,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .requiredHeight(8.dp),
+                    color = colors.primary.main,
+                    trackColor = colors.neutral7,
+                    strokeCap = StrokeCap.Square
+                )
+            }
 
             Spacer(modifier = Modifier.height(spacing.medium))
 
-            HorizontalPager(
-                state = rememberPagerState {
-                    state.pages.size
-                },
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f),
-                verticalAlignment = Alignment.Top,
-                userScrollEnabled = false
-            ) { page ->
-                when (val currentPage = state.pages[page]) {
-                    is SignUpPageContent.RegisterPageContent<*> -> {
-                        SignUpFieldPage(
-                            field = currentPage.field,
-                            onValueChanged = { field ->
-                                onEvent(
-                                    SignUpScreenEvent.OnFieldUpdated(field)
-                                )
-                            }
-                        )
-                    }
-                    is SignUpPageContent.VerificationPageContent -> {
-                        SignUpVerificationPage(
-                            state = currentPage.state,
-                            onEvent = onEvent
-                        )
+                    .padding(horizontal = spacing.medium)
+            ) {
+
+                HorizontalPager(
+                    state = rememberPagerState {
+                        state.pages.size
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f),
+                    verticalAlignment = Alignment.Top,
+                    userScrollEnabled = false
+                ) { page ->
+                    when (val currentPage = state.pages[page]) {
+                        is SignUpPageContent.RegisterPageContent<*> -> {
+                            SignUpFieldPage(
+                                field = currentPage.field,
+                                onValueChanged = { field ->
+                                    onEvent(
+                                        SignUpScreenEvent.OnFieldUpdated(field)
+                                    )
+                                }
+                            )
+                        }
+                        is SignUpPageContent.VerificationPageContent -> {
+                            SignUpVerificationPage(
+                                state = currentPage.state,
+                                onEvent = onEvent
+                            )
+                        }
                     }
                 }
+
+                PrimaryButton(
+                    text = stringResource(id = R.string.button_next),
+                    onClick = {
+                        onEvent(SignUpScreenEvent.OnNextClicked)
+                    },
+                    enabled = true,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .requiredHeight(56.dp)
+                )
+
+                Spacer(modifier = Modifier.height(spacing.large))
             }
-
-            PrimaryButton(
-                text = stringResource(id = R.string.button_next),
-                onClick = {
-                    onEvent(SignUpScreenEvent.OnNextClicked)
-                },
-                enabled = true,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .requiredHeight(56.dp)
-            )
-
-            Spacer(modifier = Modifier.height(spacing.large))
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun SignUpScreenPreview() {
+private fun SignUpScreenPreview() {
     DragonFlyTheme {
         val currentPage = 1
         val steps = signUpSteps(false)

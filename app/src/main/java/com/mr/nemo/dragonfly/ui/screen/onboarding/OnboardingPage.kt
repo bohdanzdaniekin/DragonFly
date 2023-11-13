@@ -214,7 +214,7 @@ fun OnboardingPage(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun OnboardingPagePreview(
+private fun OnboardingPagePreview(
     @PreviewParameter(OnboardingPagePreviewParameterProvider::class)
     content: OnboardingContent
 ) {
